@@ -1,6 +1,5 @@
 extend schema @federation(version: "2.3")
 
 extend type Query {
-  hello(name: String): String! @resolver(name: "hello")
   ping(name: String): String! @resolver(name: "ping")
 }
