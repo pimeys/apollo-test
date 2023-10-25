@@ -1,0 +1,12 @@
+extend schema @federation(version: "2.3")
+
+extend schema
+  @postgres(
+    name: "Neon"
+    url: "{{ env.DATABASE_URL }}"
+    namespace: true
+  )
+
+extend type Query {
+  hello(name: String): String! @resolver(name: "hello")
+}
