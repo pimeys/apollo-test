@@ -9,4 +9,5 @@ extend schema
 
 extend type Query {
   hello(name: String): String! @resolver(name: "hello")
+  ping(name: String): String! @resolver(name: "ping")
 }
